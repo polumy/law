@@ -1,0 +1,7 @@
+body {
+  background-color: #f0f0f0; /* 배경색 */
+  text-align: center;       /* 글자 가운데 정렬 */
+}
+h1 {
+  color: navy;              /* 제목 색깔 */
+}
