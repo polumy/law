@@ -105,44 +105,61 @@
             <div class="bar"></div>
         </div>
 
-        <div class="location-content">
-            <div class="location-info">
-                <div class="info-item">
-                    <label>주소</label>
-                    <p>대구광역시 수성구 동대구로 348-13 청담빌딩 401호</p>
-                </div>
-                <div class="info-item">
-                    <label>대표전화</label>
-                    <p>053-754-2580</p>
-                </div>
-                <div class="info-item">
-                    <label>팩스번호</label>
-                    <p>053-754-2582</p>
-                </div>
-                
-                <div class="subway-box">
-                    <p>지하철 2호선 범어역 10번 출구 (도보 5분)</p>
-                </div>
-            </div>
+        <!-- 주소 정보 -->
+        <div class="location-info" style="margin-bottom: 20px;">
+            <p><strong>주소</strong><br>
+                대구광역시 수성구 동대구로 348-13 청담빌딩 401호
+            </p>
+            <p><strong>대표전화</strong><br>
+                053-754-2580
+            </p>
+        </div>
 
-            <div class="map-box" style="max-width:100%;">
-                <div style="font: normal normal 400 12px/normal dotum, sans-serif; width: 100%; max-width: 640px; height: 392px; color: #333; position: relative; margin: 0 auto;">
-                    <div style="height:360px;">
-                        <a href="https://map.kakao.com/?urlX=867764.0000000625&urlY=659792.9999999981&itemId=26076806&q=%EB%B3%80%ED%98%B8%EC%82%AC%EA%B9%80%EC%B2%A0%ED%99%8D%EB%B2%95%EB%A5%A0%EC%82%AC%EB%AC%B4%EC%86%8C&srcid=26076806&map_type=TYPE_MAP&from=roughmap" target="_blank">
-                            <img src="https://t1.daumcdn.net/roughmap/imgmap/0866fce1e1ec57cdb05e635df970189ee9940c73e0e66d0bf0f72d271ea7b7af" style="width:100%; height:360px; border:1px solid #ccc;" alt="변호사 김철홍 법률사무소 위치 지도">
-                        </a>
-                    </div>
-                    <div style="overflow:hidden; padding:7px 11px; border:1px solid rgba(0,0,0,0.1); background:#f9f9f9; font-size:11px;">
-                        <a href="https://map.kakao.com" target="_blank" style="float:left;">
-                            <img src="https://t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵">
-                        </a>
-                        <div style="float:right;">
-                            <a target="_blank" href="https://map.kakao.com/?from=roughmap&srcid=26076806&rv=on" style="margin-right:8px; color:#000; text-decoration:none;">로드뷰</a> |
-                            <a target="_blank" href="https://map.kakao.com/?from=roughmap&eX=867764.0000000625&eY=659792.9999999981" style="margin:0 8px; color:#000; text-decoration:none;">길찾기</a> |
-                            <a target="_blank" href="https://map.kakao.com/?map_type=TYPE_MAP&from=roughmap&itemId=26076806" style="margin-left:8px; color:#000; text-decoration:none;">지도 크게 보기</a>
-                        </div>
+        <!-- 지도 박스 (주소 아래) -->
+        <div class="map-box" style="width:100%; max-width:640px; margin:0 auto;">
+
+            <div style="
+                font: normal normal 400 12px/normal dotum, sans-serif;
+                width:100%;
+                height:392px;
+                color:#333;
+                position:relative;
+            ">
+
+                <div style="height:360px;">
+                    <a href="https://map.kakao.com/?itemId=26076806"
+                       target="_blank">
+                        <img
+                            src="https://t1.daumcdn.net/roughmap/imgmap/0866fce1e1ec57cdb05e635df970189ee9940c73e0e66d0bf0f72d271ea7b7af"
+                            alt="변호사 김철홍 법률사무소 위치"
+                            style="width:100%; height:360px; border:1px solid #ccc;">
+                    </a>
+                </div>
+
+                <div style="
+                    overflow:hidden;
+                    padding:7px 11px;
+                    border:1px solid rgba(0,0,0,0.1);
+                    background:#f9f9f9;
+                    font-size:11px;
+                ">
+                    <a href="https://map.kakao.com" target="_blank" style="float:left;">
+                        <img src="https://t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png"
+                             width="72" height="16" alt="카카오맵">
+                    </a>
+
+                    <div style="float:right;">
+                        <a target="_blank" href="https://map.kakao.com/?itemId=26076806&rv=on"
+                           style="color:#000; text-decoration:none;">로드뷰</a>
+                        |
+                        <a target="_blank" href="https://map.kakao.com/?itemId=26076806"
+                           style="color:#000; text-decoration:none;">길찾기</a>
+                        |
+                        <a target="_blank" href="https://map.kakao.com/?itemId=26076806"
+                           style="color:#000; text-decoration:none;">지도 크게 보기</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
