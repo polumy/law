@@ -97,3 +97,57 @@ footer { background: #222; color: #888; padding: 60px 0; text-align: center; fon
     min-height: 400px;
     background-color: #eee; /* 로딩 전 영역 표시 */
 }
+/* 오시는 길 레이아웃 */
+.location-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* 왼쪽 정보 */
+.location-info {
+    flex: 1;
+}
+
+/* 오른쪽 지도 */
+.map-box {
+    flex: 1;
+}
+
+/* info 기본 스타일 */
+.location-info .info-item {
+    margin-bottom: 24px;
+}
+
+.location-info label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #111;
+}
+
+.location-info p {
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ✅ 지하철 박스 */
+.location-info .subway {
+    background: #e6e7f0;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #222;
+}
+
+/* 모바일 대응 */
+@media (max-width: 900px) {
+    .location-content {
+        flex-direction: column;
+    }
+
+    .map-box {
+        margin-top: 30px;
+    }
+}
