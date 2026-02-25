@@ -86,14 +86,3 @@ footer { background: #222; color: #888; padding: 60px 0; text-align: center; fon
     .location-content { flex-direction: column; }
     nav { display: none; }
 }
-/* 카카오맵이 무조건 보이게 만드는 설정 */
-.root_daum_roughmap {
-    width: 100% !important;
-}
-.root_daum_roughmap .wrap_map {
-    height: 400px !important; /* 높이가 0이 되지 않도록 고정 */
-}
-.map-box {
-    min-height: 400px;
-    background-color: #eee; /* 로딩 전 영역 표시 */
-}
