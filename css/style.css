@@ -62,10 +62,7 @@ nav ul li a:hover { color: #003366; }
 .info-item {.info-item {
     margin-bottom: 24px;
     /* border-bottom 제거 */
-}.info-item {
-    margin-bottom: 24px;
-    /* border-bottom 제거 */
-}-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+}margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
 .info-item label { display: block; font-weight: 700; color: #003366; margin-bottom: 5px; font-size: 14px; }
 .info-item p { font-size: 17px; }
 .map-box { flex: 2; width: 100%; border: 1px solid #ddd; }
