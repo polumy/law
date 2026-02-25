@@ -64,33 +64,35 @@
         </div>
     </section>
 
-    <section id="location">
-        <div class="container location-container">
-            <div class="location-info">
-                <span class="sub-title">LOCATION</span>
-                <h2>오시는 길</h2>
-                <div class="office-details">
-                    <h3>김철홍 법률사무소</h3>
-                    <p>대구광역시 수성구 동대구로 348-13 청담빌딩 401호</p>
-                    <p><strong>TEL</strong> 053-754-2580</p>
-                    <p><strong>FAX</strong> 053-754-2582</p>
-                </div>
-            </div>
-
-            <div class="location-map">
-                <div id="daumRoughmapContainer1740458428136" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;"></div>
-                
-                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-                <script charset="UTF-8">
-                    new daum.roughmap.Lander({
-                        "timestamp" : "1740458428136",
-                        "key" : "2mwas",
-                        "mapHeight" : "400"
-                    }).render();
-                </script>
+    <section id="location" style="padding: 80px 0; background-color: #1a222c; color: #fff;">
+    <div class="container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+        
+        <div class="location-info" style="flex: 1; min-width: 300px;">
+            <span style="color: #f1c40f; font-weight: bold; display: block; margin-bottom: 10px;">LOCATION</span>
+            <h2 style="font-size: 2.5rem; margin-bottom: 30px;">오시는 길</h2>
+            <div class="office-details">
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">김철홍 법률사무소</h3>
+                <p style="color: #ccc; margin-bottom: 8px;">대구광역시 수성구 동대구로 348-13 청담빌딩 401호</p>
+                <p style="margin-bottom: 5px;"><strong>TEL</strong> 053-754-2580</p>
+                <p><strong>FAX</strong> 053-754-2582</p>
             </div>
         </div>
-    </section>
+
+        <div class="location-map" style="flex: 1.5; min-width: 300px; position: relative;">
+            <div id="daumRoughmapContainer1740458428136" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden;"></div>
+
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+            <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                    "timestamp" : "1740458428136",
+                    "key" : "2mwas",
+                    "mapHeight" : "400"
+                }).render();
+            </script>
+        </div>
+    </div>
+</section>
 
     <section id="inquiry-form-section">
         <div class="container">
