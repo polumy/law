@@ -306,6 +306,29 @@
         <p class="copy">COPYRIGHT © Yul-eon. ALL RIGHTS RESERVED.</p>
     </div>
 </footer>
+<script>
+fetch("http://localhost:3000/api/blog")
+  .then(res => res.json())
+  .then(posts => {
+    const grid = document.getElementById("blogGrid");
 
+    posts.slice(0, 4).forEach(post => {
+      grid.innerHTML += `
+        <a href="${post.link}" target="_blank" class="blog-card">
+            <img src="${post.thumbnail}">
+            <div class="blog-card-content">
+                <span class="blog-tag">블로그</span>
+                <h4>${post.title}</h4>
+                <p>${post.description.slice(0, 70)}...</p>
+            </div>
+        </a>
+      `;
+    });
+  })
+  .catch(() => {
+    document.getElementById("blogGrid").innerHTML =
+      "<p>블로그 글을 불러오지 못했습니다.</p>";
+  });
+</script>s
 </body>
 </html>
