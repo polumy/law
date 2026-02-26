@@ -332,10 +332,20 @@
                     <p>T. 053-754-2580 / F. 053-754-2582</p>
                 </div>
             </div>
+            
             <div class="map-box">
-                <a href="https://map.kakao.com/?itemId=26076806" target="_blank">
-                    <img src="https://t1.daumcdn.net/roughmap/imgmap/0866fce1e1ec57cdb05e635df970189ee9940c73e0e66d0bf0f72d271ea7b7af" alt="지도">
-                </a>
+                <div id="daumRoughmapContainer1772095590727" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;"></div>
+
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        "timestamp" : "1772095590727",
+                        "key" : "idox8ebsyf7",
+                        "mapWidth" : "100%", /* 가로 길이를 100%로 설정하여 박스에 맞춤 */
+                        "mapHeight" : "360"
+                    }).render();
+                </script>
             </div>
         </div>
     </div>
