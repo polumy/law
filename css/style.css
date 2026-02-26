@@ -164,42 +164,30 @@ footer { background: #222; color: #888; padding: 60px 0; text-align: center; fon
         box-sizing: border-box; /* 패딩이 너비에 포함되게 설정 */
     }
 }
-/* 변호사 소개 카드 레이아웃 */
 .lawyer-cards {
-    display: flex;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
-
 .lawyer-card {
-    flex: 1;
-    background: #f9f9f9;
-    border: 1px solid #eee;
+    background: #fff;
     padding: 30px;
+    border: 1px solid #eee;
+    text-align: center;
 }
-
 .lawyer-card img {
     width: 100%;
-    height: 260px;
+    height: 250px;
     object-fit: cover;
     margin-bottom: 20px;
 }
-
 .lawyer-card p {
+    text-align: left;
     font-size: 15px;
-    line-height: 1.8;
-    color: #444;
-    margin-bottom: 20px;
+    color: #666;
+    margin-bottom: 15px;
 }
-
 .lawyer-card strong {
-    font-size: 22px;
-    font-weight: 700;
-    color: #1a1a1a;
-}
-
-/* 모바일 */
-@media (max-width: 768px) {
-    .lawyer-cards {
-        flex-direction: column;
-    }
+    font-size: 20px;
+    color: #003366;
 }
