@@ -164,81 +164,34 @@ footer { background: #222; color: #888; padding: 60px 0; text-align: center; fon
         box-sizing: border-box; /* 패딩이 너비에 포함되게 설정 */
     }
 }
-/* 블로그 카드 */
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-}
-
-.blog-card {
-    background: #fff;
-    border: 1px solid #eee;
-    transition: 0.3s;
-}
-
-.blog-card:hover {
-    transform: translateY(-6px);
-    border-color: #003366;
-}
-
-.blog-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.blog-card-content {
-    padding: 18px;
-}
-
-.blog-tag {
-    display: inline-block;
-    background: #003366;
-    color: #fff;
-    font-size: 12px;
-    padding: 4px 10px;
-    margin-bottom: 10px;
-}
-
-.blog-card h4 {
-    font-size: 17px;
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
-.blog-card p {
-    font-size: 14px;
-    color: #666;
-}
-/* 변호사 소개 – 나란히 카드 */
-.intro-lawyer-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+/* 변호사 소개 카드 레이아웃 */
+.lawyer-cards {
+    display: flex;
     gap: 40px;
 }
 
-.intro-lawyer-card {
+.lawyer-card {
+    flex: 1;
     background: #f9f9f9;
     border: 1px solid #eee;
     padding: 30px;
 }
 
-.intro-lawyer-image img {
+.lawyer-card img {
     width: 100%;
     height: 260px;
     object-fit: cover;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.intro-lawyer-text {
+.lawyer-card p {
     font-size: 15px;
     line-height: 1.8;
     color: #444;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.intro-lawyer-name {
+.lawyer-card strong {
     font-size: 22px;
     font-weight: 700;
     color: #1a1a1a;
@@ -246,7 +199,7 @@ footer { background: #222; color: #888; padding: 60px 0; text-align: center; fon
 
 /* 모바일 */
 @media (max-width: 768px) {
-    .intro-lawyer-grid {
-        grid-template-columns: 1fr;
+    .lawyer-cards {
+        flex-direction: column;
     }
 }
