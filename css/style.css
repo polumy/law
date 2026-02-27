@@ -224,3 +224,15 @@ footer { background: #222; color: #888; padding: 60px 0; text-align: center; fon
         text-align: center;
     }
 }
+.history {
+    list-style: none;
+    padding-left: 0;
+}
+
+.history-title {
+    font-weight: 700;
+    color: #1f3c88;
+    margin: 14px 0 6px;
+    padding-left: 10px;
+    border-left: 4px solid #1f3c88;
+}
