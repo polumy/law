@@ -72,11 +72,10 @@
         }
         .history li.history-title::before { display: none !important; }
 
-        /* [6] 업무분야 호버 효과 복구 */
+        /* [6] 업무분야 */
         .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
         .service-card { background: #f9f9f9; padding: 30px; border: 1px solid #eee; transition: 0.3s; text-align: center; }
         .service-card h4 { color: #003366; margin-bottom: 10px; font-size: 20px; }
-        /* 마우스 갖다대면 움직이는 효과 */
         .service-card:hover { 
             transform: translateY(-10px); 
             background: #fff; 
@@ -92,9 +91,129 @@
         footer { background: #222; color: #bbb; padding: 50px 0; text-align: center; font-size: 14px; }
         .office-footer-info { margin-bottom: 15px; color: #fff; line-height: 1.8; }
 
-        @media (max-width: 900px) {
+        /* [9] 블로그 섹션 */
+        #blog { background-color: #fff; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .blog-card { 
+            background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; 
+            transition: 0.4s ease; cursor: pointer;
+        }
+        .blog-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .blog-img-box { width: 100%; height: 200px; overflow: hidden; position: relative; }
+        .blog-img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease; }
+        .blog-card:hover .blog-img-box img { transform: scale(1.1); }
+        .blog-content { padding: 25px; }
+        .blog-date { font-size: 13px; color: #999; margin-bottom: 10px; display: block; }
+        .blog-content h4 { font-size: 19px; color: #1a1a1a; margin-bottom: 15px; font-weight: 700; line-height: 1.4; word-break: keep-all; }
+        .blog-content p { font-size: 14px; color: #666; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .blog-more { font-size: 14px; color: #cbb279; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; }
+        .blog-more::after { content: '→'; transition: 0.3s; }
+        .blog-card:hover .blog-more::after { transform: translateX(5px); }
+        .blog-btn-wrap { text-align: center; margin-top: 50px; }
+        .blog-view-all { padding: 12px 35px; border: 1px solid #cbb279; color: #cbb279; border-radius: 30px; font-weight: 500; transition: 0.3s; }
+        .blog-view-all:hover { background: #cbb279; color: #fff; }
+
+        /* =============================================
+           [10] 모바일 반응형 (기존 디자인 유지)
+        ============================================= */
+
+        /* 햄버거 메뉴 버튼 */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1100;
+        }
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: #333;
+            transition: 0.3s;
+        }
+        .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        @media (max-width: 768px) {
+
+            /* 헤더 */
+            header { height: 70px; }
+            .logo-img { height: 45px; }
+            .logo-text { font-size: 17px; }
+            .lawyer-name { font-size: 12px; }
+
+            /* 햄버거 표시 */
+            .hamburger { display: flex; }
+
+            /* 네비게이션 모바일 드롭다운 */
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                border-bottom: 1px solid #eee;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+                transform: translateY(-110%);
+                transition: transform 0.3s ease;
+                z-index: 999;
+            }
+            nav.open { transform: translateY(0); }
+            nav ul { flex-direction: column; gap: 0; padding: 10px 0; }
+            nav ul li { width: 100%; text-align: center; }
+            nav ul li a { display: block; padding: 14px 20px; font-size: 16px; border-bottom: 1px solid #f5f5f5; }
+            .nav-btn {
+                margin: 10px auto;
+                display: inline-block;
+                min-width: auto;
+                padding: 10px 25px;
+                font-size: 14px !important;
+            }
+
+            /* 섹션 여백 */
+            section { padding: 60px 0; scroll-margin-top: 70px; }
+            .section-title h3 { font-size: 24px; }
+
+            /* 히어로 */
+            #hero { height: auto; min-height: 60vh; margin-top: 70px; padding: 60px 0; }
+            .hero-text h2 { font-size: 26px; word-break: keep-all; }
+            .hero-text p { font-size: 14px; word-break: keep-all; }
+            .main-btn { padding: 12px 30px; font-size: 15px; }
+
+            /* 구성원 소개 */
             .lawyer-group { flex-direction: column; align-items: center; }
-            .location-content { grid-template-columns: 1fr; }
+            .lawyer-profile { width: 100%; padding: 30px 20px; }
+            .lawyer-info h4 { font-size: 20px; }
+
+            /* 업무분야 */
+            .service-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+            .service-card { padding: 20px 15px; }
+            .service-card h4 { font-size: 16px; }
+            .service-card p { font-size: 13px; }
+
+            /* 블로그 */
+            .blog-grid { grid-template-columns: 1fr; gap: 20px; }
+            .blog-content h4 { font-size: 16px; }
+            .blog-btn-wrap { margin-top: 30px; }
+
+            /* 오시는 길 */
+            .location-content { grid-template-columns: 1fr; gap: 25px; }
+            .map-box img { height: 220px; }
+
+            /* 상담 예약 */
+            .inquiry-box { padding: 25px 15px !important; }
+            .inquiry-box > form > div:first-child { flex-direction: column !important; gap: 12px !important; }
+
+            /* 푸터 */
+            footer { padding: 35px 0; font-size: 13px; }
+        }
+
+        @media (max-width: 400px) {
+            .service-grid { grid-template-columns: 1fr; }
+            .hero-text h2 { font-size: 22px; }
         }
     </style>
 </head>
@@ -111,11 +230,15 @@
                 </div>
             </a>
         </h1>
-        <nav>
+        <!-- 햄버거 버튼 -->
+        <div class="hamburger" id="hamburger" onclick="toggleNav()">
+            <span></span><span></span><span></span>
+        </div>
+        <nav id="main-nav">
             <ul>
-                <li><a href="#introduction">소개</a></li>
-                <li><a href="#services">업무분야</a></li>
-                <li><a href="#location">오시는 길</a></li>
+                <li><a href="#introduction" onclick="closeNav()">소개</a></li>
+                <li><a href="#services" onclick="closeNav()">업무분야</a></li>
+                <li><a href="#location" onclick="closeNav()">오시는 길</a></li>
                 <li><a href="tel:053-754-2580" class="nav-btn">대표전화<br>053-754-2580</a></li>
             </ul>
         </nav>
@@ -132,7 +255,6 @@
         </div>
     </div>
 </section>
-
 
 <section id="services" style="background-color: #fcfcfc;">
     <div class="container">
@@ -160,7 +282,6 @@
         </div>
     </div>
 </section>
-
 
 <section id="introduction">
     <div class="container">
@@ -215,51 +336,6 @@
     </div>
 </section>
 
-<style>
-    /* 블로그 섹션 스타일 */
-    #blog { background-color: #fff; }
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    
-    .blog-card { 
-        background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; 
-        transition: 0.4s ease; cursor: pointer;
-    }
-    .blog-card:hover { 
-        transform: translateY(-10px); 
-        box-shadow: 0 15px 30px rgba(0,0,0,0.08); 
-    }
-    
-    .blog-img-box { width: 100%; height: 200px; overflow: hidden; position: relative; }
-    .blog-img-box img { 
-        width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease; 
-    }
-    .blog-card:hover .blog-img-box img { transform: scale(1.1); }
-
-    .blog-content { padding: 25px; }
-    .blog-date { font-size: 13px; color: #999; margin-bottom: 10px; display: block; }
-    .blog-content h4 { 
-        font-size: 19px; color: #1a1a1a; margin-bottom: 15px; font-weight: 700; 
-        line-height: 1.4; word-break: keep-all;
-    }
-    .blog-content p { 
-        font-size: 14px; color: #666; margin-bottom: 20px; 
-        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-    }
-    .blog-more { 
-        font-size: 14px; color: #cbb279; font-weight: 600; 
-        display: inline-flex; align-items: center; gap: 5px; 
-    }
-    .blog-more::after { content: '→'; transition: 0.3s; }
-    .blog-card:hover .blog-more::after { transform: translateX(5px); }
-
-    .blog-btn-wrap { text-align: center; margin-top: 50px; }
-    .blog-view-all { 
-        padding: 12px 35px; border: 1px solid #cbb279; color: #cbb279; 
-        border-radius: 30px; font-weight: 500; transition: 0.3s;
-    }
-    .blog-view-all:hover { background: #cbb279; color: #fff; }
-</style>
-
 <section id="blog">
     <div class="container">
         <div class="section-title">
@@ -268,53 +344,41 @@
             <div class="bar"></div>
         </div>
         <div class="blog-grid">
-
-            <!-- 글1: 지역주택조합 / 계약금 / 총회결의 -->
             <article class="blog-card" onclick="window.open('https://blog.naver.com/goodluck-withus/224069569461')">
                 <div class="blog-img-box">
                     <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="지역주택조합"
                          onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80'">
                 </div>
                 <div class="blog-content">
-                
                     <h4>"환불 보장" 믿었는데 무효? — 지역주택조합 계약금, 약속보다 무서운 건 '총회 결의'</h4>
                     <p>조합이 개인에게 '환불 보장'을 약속했을 때, 총회 결의가 없으면 그 약속은 유효할까요? 계약 전 반드시 알아야 할 법적 쟁점을 살펴봅니다.</p>
                     <span class="blog-more">자세히 보기</span>
                 </div>
             </article>
-
-            <!-- 글2: 보험 약관 / 알릴 의무 -->
             <article class="blog-card" onclick="window.open('https://blog.naver.com/goodluck-withus/224063826574')">
                 <div class="blog-img-box">
                     <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80" alt="보험약관">
                 </div>
                 <div class="blog-content">
-                 
                     <h4>"보험 약관 설명 안 해줬는데… 그래도 보험사는 해지할 수 있다?" — '알릴 의무'가 뒤통수 치는 순간</h4>
                     <p>보험 약관 설명을 안 들었어도, 법에 정해진 '알릴 의무'까지 사라질까요? 설명 안 한 약관은 무효일 수 있지만, 법정 의무까지 없어지는 건 아닙니다.</p>
                     <span class="blog-more">자세히 보기</span>
                 </div>
             </article>
-
-            <!-- 글3: 사해행위취소 / 강제경매 / 채권자 → 판사봉 이미지 -->
             <article class="blog-card" onclick="window.open('https://blog.naver.com/goodluck-withus/224063826094')">
                 <div class="blog-img-box">
                     <img src="https://plus.unsplash.com/premium_photo-1733259707122-c8d827ce298f?q=80&w=1734&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="판사봉">
                 </div>
                 <div class="blog-content">
-                
                     <h4>사해행위취소, 끝난 경매도 되돌릴 수 있을까? — '배당요구 안 한 채권자'의 뼈아픈 반전</h4>
                     <p>강제경매가 끝난 뒤, 배당요구도 하지 않은 일반채권자가 사해행위취소를 통해 가액배상까지 받을 수 있을까요? 쉽게 풀어드립니다.</p>
                     <span class="blog-more">자세히 보기</span>
                 </div>
             </article>
-
         </div>
-
         <div class="blog-btn-wrap" style="text-align: center; margin-top: 70px;">
             <a href="https://blog.naver.com/goodluck-withus" class="blog-view-all" target="_blank">공식 블로그 바로가기</a>
         </div>
-
     </div>
 </section>
 
@@ -384,6 +448,28 @@
         <p class="copy">COPYRIGHT © Yul-eon. ALL RIGHTS RESERVED.</p>
     </div>
 </footer>
+
+<script>
+    function toggleNav() {
+        const nav = document.getElementById('main-nav');
+        const hamburger = document.getElementById('hamburger');
+        nav.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    }
+    function closeNav() {
+        document.getElementById('main-nav').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('active');
+    }
+    // 바깥 클릭시 닫기
+    document.addEventListener('click', function(e) {
+        const nav = document.getElementById('main-nav');
+        const hamburger = document.getElementById('hamburger');
+        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+            nav.classList.remove('open');
+            hamburger.classList.remove('active');
+        }
+    });
+</script>
 
 </body>
 </html>
