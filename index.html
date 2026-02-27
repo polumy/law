@@ -22,9 +22,9 @@
             position: fixed; top: 0; left: 0; z-index: 1000; display: flex; align-items: center;
         }
         header .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo a { display: flex; align-items: center; gap: 15px; }
+        .logo a { display: flex; align-items: center; gap: 20px; }
         .logo-img { height: 60px; width: auto; display: block; }
-        .logo-text { font-size: 22px; font-weight: 700; color: #1a1a1a; white-space: nowrap; }
+        .logo-text { font-size: 27px; font-weight: 700; color: #1a1a1a; white-space: nowrap; }
         .lawyer-name { font-size: 16px; font-weight: 500; color: #003366; white-space: nowrap; }
         @media (max-width: 768px) { .lawyer-name { display: none; } }
 
@@ -145,7 +145,7 @@
             header .container { padding: 0; }
             .logo a { gap: 8px; }
             .logo-img { height: 38px; }
-            .logo-text { font-size: 19px; white-space: nowrap; }
+            .logo-text { font-size: 27px; white-space: nowrap; }
             .nav-btn { display: none; }
             nav.open .nav-btn { display: inline-block; }
 
@@ -154,6 +154,7 @@
 
             /* 네비게이션 모바일 드롭다운 */
             nav {
+                display: none;
                 position: fixed;
                 top: 70px;
                 left: 0;
@@ -161,11 +162,9 @@
                 background: #fff;
                 border-bottom: 1px solid #eee;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-                transform: translateY(-110%);
-                transition: transform 0.3s ease;
                 z-index: 999;
             }
-            nav.open { transform: translateY(0); }
+            nav.open { display: block; }
             nav ul { flex-direction: column; gap: 0; padding: 10px 0; }
             nav ul li { width: 100%; text-align: center; }
             nav ul li a { display: block; padding: 14px 20px; font-size: 16px; border-bottom: 1px solid #f5f5f5; }
