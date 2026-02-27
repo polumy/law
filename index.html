@@ -133,6 +133,35 @@
     </div>
 </section>
 
+
+<section id="services" style="background-color: #fcfcfc;">
+    <div class="container">
+        <div class="section-title">
+            <h3>주요 업무분야</h3>
+            <div class="bar"></div>
+        </div>
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>민사 소송</h4>
+                <p>손해배상, 부동산, 채권채무 등 일상 속 법률 분쟁 해결</p>
+            </div>
+            <div class="service-card">
+                <h4>형사 변호</h4>
+                <p>수사 단계부터 재판까지 피의자의 권리를 철저히 보호</p>
+            </div>
+            <div class="service-card">
+                <h4>가사/상속</h4>
+                <p>이혼, 재산분할, 상속 등 가족 간의 복잡한 문제 정리</p>
+            </div>
+            <div class="service-card">
+                <h4>기업 법무</h4>
+                <p>계약 검토, 자문, 소송 대리 등 기업 운영 법률 서비스</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <section id="introduction">
     <div class="container">
         <div class="section-title">
@@ -186,30 +215,106 @@
     </div>
 </section>
 
-<section id="services" style="background-color: #fcfcfc;">
+<style>
+    /* 블로그 섹션 스타일 */
+    #blog { background-color: #fff; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    
+    .blog-card { 
+        background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; 
+        transition: 0.4s ease; cursor: pointer;
+    }
+    .blog-card:hover { 
+        transform: translateY(-10px); 
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08); 
+    }
+    
+    .blog-img-box { width: 100%; height: 200px; overflow: hidden; position: relative; }
+    .blog-img-box img { 
+        width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease; 
+    }
+    .blog-card:hover .blog-img-box img { transform: scale(1.1); }
+
+    .blog-content { padding: 25px; }
+    .blog-date { font-size: 13px; color: #999; margin-bottom: 10px; display: block; }
+    .blog-content h4 { 
+        font-size: 19px; color: #1a1a1a; margin-bottom: 15px; font-weight: 700; 
+        line-height: 1.4; word-break: keep-all;
+    }
+    .blog-content p { 
+        font-size: 14px; color: #666; margin-bottom: 20px; 
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .blog-more { 
+        font-size: 14px; color: #cbb279; font-weight: 600; 
+        display: inline-flex; align-items: center; gap: 5px; 
+    }
+    .blog-more::after { content: '→'; transition: 0.3s; }
+    .blog-card:hover .blog-more::after { transform: translateX(5px); }
+
+    .blog-btn-wrap { text-align: center; margin-top: 50px; }
+    .blog-view-all { 
+        padding: 12px 35px; border: 1px solid #cbb279; color: #cbb279; 
+        border-radius: 30px; font-weight: 500; transition: 0.3s;
+    }
+    .blog-view-all:hover { background: #cbb279; color: #fff; }
+</style>
+
+<section id="blog">
     <div class="container">
         <div class="section-title">
-            <h3>주요 업무분야</h3>
+            <h3>법률 정보 및 소식</h3>
+            <p style="text-align:center; color:#888; margin-top:-10px; margin-bottom:30px;">율언이 전해드리는 명쾌한 법률 가이드</p>
             <div class="bar"></div>
         </div>
-        <div class="service-grid">
-            <div class="service-card">
-                <h4>민사 소송</h4>
-                <p>손해배상, 부동산, 채권채무 등 일상 속 법률 분쟁 해결</p>
-            </div>
-            <div class="service-card">
-                <h4>형사 변호</h4>
-                <p>수사 단계부터 재판까지 피의자의 권리를 철저히 보호</p>
-            </div>
-            <div class="service-card">
-                <h4>가사/상속</h4>
-                <p>이혼, 재산분할, 상속 등 가족 간의 복잡한 문제 정리</p>
-            </div>
-            <div class="service-card">
-                <h4>기업 법무</h4>
-                <p>계약 검토, 자문, 소송 대리 등 기업 운영 법률 서비스</p>
-            </div>
+        <div class="blog-grid">
+
+            <!-- 글1: 지역주택조합 / 계약금 / 총회결의 -->
+            <article class="blog-card" onclick="window.open('https://blog.naver.com/goodluck-withus/224069569461')">
+                <div class="blog-img-box">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="지역주택조합"
+                         onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">2024.03.20</span>
+                    <h4>"환불 보장" 믿었는데 무효? — 지역주택조합 계약금, 약속보다 무서운 건 '총회 결의'</h4>
+                    <p>조합이 개인에게 '환불 보장'을 약속했을 때, 총회 결의가 없으면 그 약속은 유효할까요? 계약 전 반드시 알아야 할 법적 쟁점을 살펴봅니다.</p>
+                    <span class="blog-more">자세히 보기</span>
+                </div>
+            </article>
+
+            <!-- 글2: 보험 약관 / 알릴 의무 -->
+            <article class="blog-card" onclick="window.open('https://blog.naver.com/goodluck-withus/224063826574')">
+                <div class="blog-img-box">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80" alt="보험약관">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">2024.03.15</span>
+                    <h4>"보험 약관 설명 안 해줬는데… 그래도 보험사는 해지할 수 있다?" — '알릴 의무'가 뒤통수 치는 순간</h4>
+                    <p>보험 약관 설명을 안 들었어도, 법에 정해진 '알릴 의무'까지 사라질까요? 설명 안 한 약관은 무효일 수 있지만, 법정 의무까지 없어지는 건 아닙니다.</p>
+                    <span class="blog-more">자세히 보기</span>
+                </div>
+            </article>
+
+            <!-- 글3: 사해행위취소 / 강제경매 / 채권자 → 판사봉 이미지 -->
+            <article class="blog-card" onclick="window.open('https://blog.naver.com/goodluck-withus/224063826094')">
+                <div class="blog-img-box">
+                    <img src="https://plus.unsplash.com/premium_photo-1733259707122-c8d827ce298f?q=80&w=1734&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="판사봉">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">2026.02.24</span>
+                    <h4>사해행위취소, 끝난 경매도 되돌릴 수 있을까? — '배당요구 안 한 채권자'의 뼈아픈 반전</h4>
+                    <p>강제경매가 끝난 뒤, 배당요구도 하지 않은 일반채권자가 사해행위취소를 통해 가액배상까지 받을 수 있을까요? 쉽게 풀어드립니다.</p>
+                    <span class="blog-more">자세히 보기</span>
+                </div>
+            </article>
+
         </div>
+
+        <div class="blog-btn-wrap" style="text-align: center; margin-top: 70px;">
+            <a href="https://blog.naver.com/goodluck-withus" class="blog-view-all" target="_blank">공식 블로그 바로가기</a>
+        </div>
+
     </div>
 </section>
 
