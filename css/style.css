@@ -393,3 +393,51 @@ footer { background: #222; color: #888; padding: 60px 0; text-align: center; fon
         font-size: 13.5px;
     }
 }
+/* 리스트 기본 점 및 여백 제거 */
+.history {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.history li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555; /* 부드러운 다크 그레이 */
+    position: relative;
+    padding-left: 0 !important; 
+    margin-bottom: 4px;
+}
+
+/* 불렛 포인트 강제 제거 */
+.history li::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* 변호사 소개글 스타일 */
+.lawyer-intro {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 25px;
+    word-break: keep-all;
+}
+
+/* 소속/위원회 제목 및 하단 라인 */
+.history-title {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #003366 !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 12px !important;
+    border-bottom: 1px solid #eeeeee !important; /* 깔끔한 구분선 */
+    display: block !important;
+    width: 100%;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+    .lawyer-profile {
+        margin-bottom: 40px;
+    }
+}
