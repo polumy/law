@@ -234,3 +234,78 @@ footer { background: #222; color: #888; padding: 60px 0; text-align: center; fon
     border-radius: 12px;
     margin: 14px 0 6px;
 }
+/* 공통 리스트 */
+.history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history li {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* 소제목 */
+.history-title {
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #111;
+    border-left: 4px solid #1e3a8a;
+    padding-left: 8px;
+}
+
+/* 現) 강조 */
+.history li strong {
+    font-weight: 700;
+    color: #000;
+    margin-right: 2px;
+}
+
+/* 위원회 2열 그리드 */
+.history {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.history .committee {
+    grid-column: span 1;
+}
+
+/* 위원회 구간만 2열 */
+.history .committee:nth-of-type(n) {
+    display: block;
+}
+
+.history .history-title + .committee,
+.history .committee {
+    grid-column: auto;
+}
+
+/* 위원회만 2열 */
+.history {
+    grid-auto-flow: row;
+}
+
+.history .committee {
+    display: list-item;
+}
+
+/* 위원회 전용 2열 */
+.history {
+    grid-template-columns: 1fr 1fr;
+}
+
+.history .history-title {
+    grid-column: 1 / -1;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .history {
+        grid-template-columns: 1fr;
+    }
+}
