@@ -234,98 +234,51 @@ footer { background: #222; color: #888; padding: 60px 0; text-align: center; fon
     border-radius: 12px;
     margin: 14px 0 6px;
 }
-/* ====== 소속 / 위원회 스타일 완성본 ====== */
-
-/* 전체 리스트 기본 정리 */
-.history {
-    margin-top: 15px;
-    padding-left: 0;
+/* 소속 / 위원회 커리어 섹션 */
+.career-section {
+    margin-top: 20px;
 }
 
-/* 일반 항목 */
-.history li {
-    list-style: none;
-    font-size: 14px;
-    color: #444;
-    margin-bottom: 6px;
-    padding-left: 14px;
-    position: relative;
+/* 소속 / 위원회 블록 */
+.career-block {
+    margin-bottom: 26px;
 }
 
-/* 일반 항목 점 */
-.history li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #cbb279;
-}
-
-/* 라벨 (소속 / 위원회) */
-.history-label {
-    margin: 18px 0 8px;
-    padding: 5px 14px;
+/* 소속 / 위원회 타이틀 */
+.career-title {
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     color: #003366;
-    background: #eef3ff;
-    border-radius: 20px;
+    letter-spacing: -0.3px;
+    padding-left: 10px;
+    border-left: 4px solid #003366;
+    margin-bottom: 10px;
 }
 
-/* 라벨에는 점 제거 */
-.history-label::before {
-    content: none !important;
-}
-
-/* 라벨 다음 첫 항목 여백 */
-.history-label + li {
-    margin-top: 4px;
-}
-/* ===== 구성원 이력 정리 (최종 안정판) ===== */
-
-.history {
-    margin-top: 15px;
+/* 커리어 리스트 */
+.career-list {
+    margin-top: 10px;
     padding-left: 0;
 }
 
-.history li {
-    list-style: none;
-    font-size: 14px;
+/* 개별 항목 */
+.career-list li {
+    font-size: 14.5px;
     color: #444;
-    margin-bottom: 6px;
+    line-height: 1.7;
     padding-left: 14px;
     position: relative;
+    margin-bottom: 6px;
 }
 
-/* 일반 항목 불릿 */
-.history li::before {
-    content: "•";
+/* 고급스러운 점 표시 */
+.career-list li::before {
+    content: "·";
     position: absolute;
     left: 0;
-    color: #cbb279;
-}
-
-/* 섹션 타이틀 (소속 / 위원회) */
-.history-title {
-    margin: 22px 0 8px;
-    padding-left: 0;
-    font-size: 15px;
-    font-weight: 700;
-    color: #003366;
-}
-
-/* 타이틀에는 불릿 제거 */
-.history-title::before {
-    content: none;
-}
-.history-title {
-    font-weight: 700;
-    color: #003366;
-    margin-top: 18px;
-    margin-bottom: 6px;
-    padding-left: 0;
-}
-
-.history-title::before {
-    content: none;
+    top: 0;
+    color: #cbb279; /* 로펌 포인트 컬러 */
+    font-size: 20px;
+    line-height: 1;
 }
